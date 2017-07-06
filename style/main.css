@@ -948,6 +948,61 @@ section {
     }
 }
 
+/*-------------------options block------------------*/
+.w-options-wr {
+    color: #222;
+}
+
+.w-options-wr .w-option {
+    width: 43.5%;
+    display: inline-block;
+    margin: 3%;
+    min-height: 200px;
+}
+
+.w-option .w-option-text {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+.w-option .w-option-text h5{
+    font-size: 18px;
+}
+
+.w-option .w-option-text p{
+    color: #222;
+    text-align: justify;
+}
+
+.circlewrapper {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.circle {
+    background-color:#f1f1f1;
+    border-radius: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .w-options-wr .w-option {
+        width: 94%;
+        display: block;
+        margin: 3%;
+    }
+}
+
+
 /*-------------- transition styles -----------------*/
 
 .project-row .project-image {
@@ -1031,6 +1086,28 @@ section .w-form.form {
 }
 
 section .w-form.form.seen {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section .interactions-page .main-heading {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity linear 0.5s, transform linear 0.5s;
+}
+
+section .interactions-page .main-heading.seen {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.interactions-page .w-option {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity linear 0.5s, transform linear 0.5s, background-color linear 0.5s;
+}
+
+.interactions-page .w-option.seen {
     opacity: 1;
     transform: translateX(0);
 }
