@@ -317,7 +317,7 @@
             var $elem = $(element);
 
             // Get the scroll position of the page.
-            var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+            var scrollElem = 'html';//((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
             var viewportTop = $(scrollElem).scrollTop() + this.getFixedHeaderCorrection();
             var viewportBottom = viewportTop + $(window).height() - this.getFixedHeaderCorrection();
 
